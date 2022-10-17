@@ -5,7 +5,7 @@ use strict;
 use warnings;
 use lib 't';
 
-use Test::More tests => 1537;
+use Test::More tests => $Config{ivsize} > 4 ? 1537 : 1025;
 use Util       qw[throws_ok];
 
 BEGIN {
